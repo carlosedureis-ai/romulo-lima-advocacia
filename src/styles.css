@@ -908,13 +908,14 @@ p {
 }
 
 .credential-item + .credential-item {
-  border-left: 1px solid rgba(32, 58, 72, 0.2);
+  border-left: 1px solid rgba(196, 139, 70, 0.32);
 }
 
-.credential-item svg {
-  color: #465761;
-  width: 34px;
-  height: 34px;
+.credential-item .credential-mark {
+  color: #c48b46;
+  width: 46px;
+  height: 46px;
+  opacity: 0.84;
 }
 
 .credential-item strong,
@@ -1273,7 +1274,7 @@ p {
     content: "";
     transform: scaleY(0);
     transform-origin: top center;
-    background: rgba(32, 58, 72, 0.2);
+    background: rgba(196, 139, 70, 0.32);
     transition: transform 850ms var(--ease-out) var(--delay, 0ms);
   }
 
@@ -1345,11 +1346,11 @@ p {
   }
 
   .credential-item:nth-child(even) {
-    border-left: 1px solid rgba(32, 58, 72, 0.2);
+    border-left: 1px solid rgba(196, 139, 70, 0.28);
   }
 
   .credential-item:nth-child(n + 3) {
-    border-top: 1px solid rgba(32, 58, 72, 0.2);
+    border-top: 1px solid rgba(196, 139, 70, 0.28);
   }
 }
 
@@ -1502,7 +1503,7 @@ p {
   }
 
   .credential-item + .credential-item {
-    border-top: 1px solid rgba(32, 58, 72, 0.2);
+    border-top: 1px solid rgba(196, 139, 70, 0.28);
   }
 
   .contact-grid {

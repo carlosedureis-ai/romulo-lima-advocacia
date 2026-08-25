@@ -2,12 +2,8 @@ import { useEffect, useRef, useState } from "react";
 import {
   ArrowRight,
   Briefcase,
-  Certificate,
   ChatCircleText,
-  Clock,
-  GraduationCap,
   HandHeart,
-  IdentificationCard,
   InstagramLogo,
   List,
   MapPin,
@@ -46,14 +42,6 @@ const differentiatorIcons = {
   care: HandHeart,
 };
 
-const credentialIcons = {
-  id: IdentificationCard,
-  education: GraduationCap,
-  time: Clock,
-  certificate: Certificate,
-  practice: Briefcase,
-};
-
 const organicPaths = {
   about:
     "M-20 60 C130 142 270 38 430 94 C620 158 770 28 980 82 C1180 132 1300 42 1460 102 L1460 650 C1190 600 1040 730 780 675 C520 620 300 760 -20 610 Z",
@@ -76,6 +64,57 @@ function OrganicBackdrop({ variant }) {
       data-draw-stroke={drawStroke ? "true" : undefined}
     >
       <path d={organicPaths[variant]} pathLength="1" />
+    </svg>
+  );
+}
+
+function CredentialIcon({ type }) {
+  const symbol = {
+    id: (
+      <>
+        <path d="M13.5 20.5 24 14l10.5 6.5" />
+        <path d="M15.5 22.5h17M17.5 22.5v9M22 22.5v9M26 22.5v9M30.5 22.5v9M15 33.5h18M13 36h22" />
+      </>
+    ),
+    education: (
+      <>
+        <path d="m12.5 20.5 11.5-6 11.5 6L24 27l-11.5-6.5Z" />
+        <path d="M17.5 24v7.5c4.2 2.8 8.8 2.8 13 0V24M35.5 20.5v8" />
+        <circle cx="35.5" cy="30.5" r="1.25" />
+      </>
+    ),
+    certificate: (
+      <>
+        <rect x="13.5" y="14.5" width="21" height="17" rx="1.5" />
+        <path d="M17.5 19h13M17.5 23h8" />
+        <circle cx="29" cy="29.5" r="5" />
+        <path d="m26.5 33.8-.6 5.2 3.1-1.8 3.1 1.8-.6-5.2" />
+      </>
+    ),
+    practice: (
+      <>
+        <path d="M24 13.5v22M15.5 18h17M19 36h10M16 38.5h16" />
+        <circle cx="24" cy="15" r="1.5" />
+        <path d="m16 18-4 9h8l-4-9ZM32 18l-4 9h8l-4-9Z" />
+        <path d="M12 27c.8 2.6 2.1 3.8 4 3.8s3.2-1.2 4-3.8M28 27c.8 2.6 2.1 3.8 4 3.8s3.2-1.2 4-3.8" />
+      </>
+    ),
+  }[type];
+
+  return (
+    <svg
+      className="credential-mark"
+      viewBox="0 0 48 48"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.35"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <circle cx="24" cy="24" r="20.5" />
+      {symbol}
     </svg>
   );
 }
@@ -427,7 +466,6 @@ function Credentials() {
         </div>
         <div className="credential-list">
           {credentials.map((item, index) => {
-            const Icon = credentialIcons[item.icon];
             return (
               <div
                 className="credential-item"
@@ -435,7 +473,7 @@ function Credentials() {
                 data-reveal="credential"
                 style={{ "--delay": `${120 + index * 110}ms` }}
               >
-                <Icon size={28} weight="thin" aria-hidden="true" />
+                <CredentialIcon type={item.icon} />
                 <div>
                   <strong>{item.label}</strong>
                   <span>{item.value}</span>
