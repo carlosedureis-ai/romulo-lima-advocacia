@@ -2,6 +2,10 @@
 
 Landing page de página única para o advogado Rômulo Lima, com atuação em Santarém/PA e região. O projeto destaca o Direito Previdenciário e direciona o visitante para o WhatsApp, com Instagram como canal secundário.
 
+## Site publicado
+
+[Acessar a landing page de Rômulo Lima](https://carlosedureis-ai.github.io/romulo-lima-advocacia/)
+
 ![Prévia da landing page](docs/preview-desktop.png)
 
 ## Tecnologias
