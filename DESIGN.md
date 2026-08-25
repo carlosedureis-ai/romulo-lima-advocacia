@@ -14,7 +14,7 @@ A presença do Rio Tapajós conecta visualmente toda a página. As seções clar
 
 ## Tipografia
 
-- Newsreader para títulos editoriais.
+- Cormorant Garamond para títulos editoriais e credenciais, com presença jurídica mais elegante.
 - Manrope para navegação, textos, botões e informações de apoio.
 
 ## Movimento
@@ -34,4 +34,3 @@ O parâmetro `?motion=full` serve apenas para visualizar todas as animações em
 - Estados ARIA no menu e no accordion.
 - Link para pular diretamente ao conteúdo.
 - Alvos de toque adaptados a telas menores.
-

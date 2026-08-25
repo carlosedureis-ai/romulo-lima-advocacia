@@ -100,9 +100,9 @@ h1,
 h2,
 h3,
 blockquote {
-  font-family: "Newsreader Variable", Georgia, serif;
-  font-weight: 420;
-  letter-spacing: -0.025em;
+  font-family: "Cormorant Garamond Variable", Georgia, serif;
+  font-weight: 500;
+  letter-spacing: -0.022em;
 }
 
 h2 {
@@ -195,7 +195,7 @@ p {
   place-items: center;
   border: 1px solid var(--champagne-strong);
   border-radius: 50%;
-  font-family: "Newsreader Variable", Georgia, serif;
+  font-family: "Cormorant Garamond Variable", Georgia, serif;
   font-size: 1rem;
   color: var(--champagne-strong);
 }
@@ -206,7 +206,7 @@ p {
 }
 
 .brand-copy strong {
-  font-family: "Newsreader Variable", Georgia, serif;
+  font-family: "Cormorant Garamond Variable", Georgia, serif;
   font-size: 1.25rem;
   font-weight: 450;
   letter-spacing: 0.05em;
@@ -780,7 +780,7 @@ p {
 }
 
 .accordion-item button span {
-  font-family: "Newsreader Variable", Georgia, serif;
+  font-family: "Cormorant Garamond Variable", Georgia, serif;
   font-size: clamp(1.2rem, 2vw, 1.55rem);
 }
 
@@ -913,9 +913,9 @@ p {
 
 .credential-item .credential-mark {
   color: #c48b46;
-  width: 46px;
-  height: 46px;
-  opacity: 0.84;
+  width: 54px;
+  height: 54px;
+  opacity: 0.92;
 }
 
 .credential-item strong,
@@ -925,12 +925,15 @@ p {
 
 .credential-item strong {
   margin-bottom: 0.25rem;
-  font-size: 0.82rem;
+  font-family: "Cormorant Garamond Variable", Georgia, serif;
+  font-size: 1.08rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
 }
 
 .credential-item span {
   color: #465761;
-  font-size: 0.72rem;
+  font-size: 0.78rem;
   letter-spacing: 0.04em;
   text-transform: uppercase;
 }
@@ -1504,7 +1507,37 @@ p {
   }
 
   .credentials-section {
-    padding-block: 12rem 10rem;
+    padding-block: 12rem 20rem;
+  }
+
+  .credentials-heading {
+    margin-bottom: 2.75rem;
+  }
+
+  .credentials-heading h2 {
+    font-size: clamp(2.75rem, 12vw, 3.45rem);
+    line-height: 0.94;
+  }
+
+  .credential-item {
+    min-height: 156px;
+    padding: 1.75rem 1rem;
+    gap: 1.1rem;
+  }
+
+  .credential-item .credential-mark {
+    width: 64px;
+    height: 64px;
+  }
+
+  .credential-item strong {
+    margin-bottom: 0.35rem;
+    font-size: 1.35rem;
+  }
+
+  .credential-item span {
+    font-size: 0.86rem;
+    line-height: 1.45;
   }
 
   .credential-item:nth-child(even),
@@ -1580,7 +1613,7 @@ p {
   }
 
   .about-section {
-    padding-block: 7.5rem;
+    padding-block: 8.5rem 12rem;
   }
 
   .portrait-frame {
@@ -1592,6 +1625,10 @@ p {
   .differentiators-grid,
   .contact-grid {
     gap: 2.5rem;
+  }
+
+  .focus-section {
+    padding-block: 7rem 9rem;
   }
 
   .focus-intro h2,
