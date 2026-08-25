@@ -1224,6 +1224,16 @@ p {
   }
 }
 
+@keyframes reduced-fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 @media (hover: hover) and (pointer: fine) {
   .menu-button:hover {
     transform: translate3d(0, -1px, 0);
@@ -1653,12 +1663,15 @@ p {
 
   html:not(.motion-full) .brand,
   html:not(.motion-full) .menu-button,
-  html:not(.motion-full) .hero-media,
-  html:not(.motion-full) .hero-person-reveal,
   html:not(.motion-full) .hero-name,
   html:not(.motion-full) .hero-line,
   html:not(.motion-full) .hero-support,
-  html:not(.motion-full) .hero-actions,
+  html:not(.motion-full) .hero-actions {
+    animation-name: reduced-fade-in;
+    transform: none;
+  }
+
+  html:not(.motion-full) .hero-media,
   html:not(.motion-full) .river-glint {
     opacity: 1;
     transform: none;
@@ -1669,7 +1682,17 @@ p {
     display: none;
   }
 
-  html.motion-ready:not(.motion-full) [data-reveal],
+  html.motion-ready:not(.motion-full) [data-reveal] {
+    opacity: 0;
+    transform: none;
+    clip-path: none;
+    transition: opacity 420ms var(--ease-out) var(--delay, 0ms);
+  }
+
+  html.motion-ready:not(.motion-full) [data-reveal][data-visible="true"] {
+    opacity: 1;
+  }
+
   html.motion-ready:not(.motion-full) [data-reveal] > *,
   html.motion-ready:not(.motion-full) [data-reveal="about-copy"] > *,
   html.motion-ready:not(.motion-full) [data-reveal="pillar"] > svg,

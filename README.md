@@ -4,7 +4,7 @@ Landing page de página única para o advogado Rômulo Lima, com atuação em Sa
 
 ## Site publicado
 
-[Acessar a landing page de Rômulo Lima](https://carlosedureis-ai.github.io/romulo-lima-advocacia/)
+[Acessar a landing page de Rômulo Lima](https://carlosedureis-ai.github.io/romulo-lima-advocacia/?motion=full)
 
 ![Prévia da landing page](docs/preview-desktop.png)
 
