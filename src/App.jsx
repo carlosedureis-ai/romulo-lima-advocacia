@@ -30,6 +30,8 @@ const WHATSAPP_URL = contact.whatsappNumber
   ? `https://wa.me/${contact.whatsappNumber}?text=${encodeURIComponent(contact.whatsappMessage)}`
   : "";
 
+const ASSET_BASE_URL = import.meta.env.BASE_URL;
+
 const pillarIcons = {
   location: MapPin,
   practice: Briefcase,
@@ -322,7 +324,10 @@ function About() {
       <OrganicBackdrop variant="about" />
       <div className="layout-shell about-grid">
         <figure className="portrait-frame" data-reveal="about-image" style={{ "--delay": "140ms" }}>
-          <img src="/images/romulo-original.png" alt="Rômulo Lima usando terno preto e óculos" />
+          <img
+            src={`${ASSET_BASE_URL}images/romulo-original.png`}
+            alt="Rômulo Lima usando terno preto e óculos"
+          />
         </figure>
         <div className="about-copy" data-reveal="about-copy" style={{ "--delay": "220ms" }}>
           <h2 id="about-title">Advocacia feita com escuta, estratégia e responsabilidade.</h2>

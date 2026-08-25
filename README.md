@@ -60,9 +60,12 @@ O número da OAB/PA, a formação, a pós-graduação e o tempo de atuação per
 
 ## Publicação
 
-O conteúdo de `dist/`, gerado por `pnpm build`, pode ser publicado em serviços de hospedagem estática. Como as imagens usam caminhos iniciados por `/images`, a configuração atual pressupõe publicação na raiz de um domínio.
+O site é publicado automaticamente no GitHub Pages após cada push para a branch `main`:
+
+https://carlosedureis-ai.github.io/romulo-lima-advocacia/
+
+O workflow em `.github/workflows/deploy.yml` instala as dependências, gera `dist/` e publica somente os arquivos compilados.
 
 ## Licença e uso de imagem
 
 Este projeto não possui uma licença de reutilização aberta. A fotografia, o nome e a identidade profissional de Rômulo Lima devem ser usados somente com autorização do titular.
-
